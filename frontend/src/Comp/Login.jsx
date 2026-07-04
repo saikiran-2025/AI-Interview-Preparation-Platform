@@ -17,7 +17,7 @@ const Login = () => {
 
   const login = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/login", data);
+      const res = await axios.post("https://ai-interview-preparation-platform-backend-ks11.onrender.com/login", data);
       if (res.data.token) {
         obj.setToken(res.data.token);
         obj.setUser({ username: res.data.username });
