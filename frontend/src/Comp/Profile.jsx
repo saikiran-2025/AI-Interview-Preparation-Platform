@@ -54,7 +54,7 @@ const Profile = () => {
     });
 
     if (profile.profileImage) {
-      setPreview(`http://localhost:5000/uploads/${profile.profileImage}`);
+      setPreview(`https://ai-interview-preparation-platform-backend-ks11.onrender.com/uploads/${profile.profileImage}`);
     } else {
       setPreview("");
     }
@@ -92,7 +92,7 @@ const Profile = () => {
         return;
       }
 
-      const res = await axios.get(`http://localhost:5000/gp/${user.username}`);
+      const res = await axios.get(`https://ai-interview-preparation-platform-backend-ks11.onrender.com/gp/${user.username}`);
       setProfileData(res.data.profile);
       fillFormFromProfile(res.data.profile);
       setMsg(res.data.msg || "Profile fetched successfully");
@@ -113,7 +113,7 @@ const Profile = () => {
       }
 
       const res = await axios.post(
-        `http://localhost:5000/cp/${user.username}`,
+        `https://ai-interview-preparation-platform-backend-ks11.onrender.com/cp/${user.username}`,
         buildFormData()
       );
 
@@ -121,7 +121,7 @@ const Profile = () => {
       setMsg(res.data.msg || "Profile created successfully");
 
       if (res.data.profile?.profileImage) {
-        setPreview(`http://localhost:5000/uploads/${res.data.profile.profileImage}`);
+        setPreview(`https://ai-interview-preparation-platform-backend-ks11.onrender.com/uploads/${res.data.profile.profileImage}`);
       }
     } catch (error) {
       setMsg(error.response?.data?.err || "Error while creating profile");
@@ -138,7 +138,7 @@ const Profile = () => {
       const fd = buildFormData();
 
       const res = await axios.put(
-        `http://localhost:5000/ep/${user.username}`,
+        `https://ai-interview-preparation-platform-backend-ks11.onrender.com/ep/${user.username}`,
         fd
       );
 
@@ -146,7 +146,7 @@ const Profile = () => {
       setMsg(res.data.msg || "Profile updated successfully");
 
       if (res.data.profile?.profileImage) {
-        setPreview(`http://localhost:5000/uploads/${res.data.profile.profileImage}`);
+        setPreview(`https://ai-interview-preparation-platform-backend-ks11.onrender.com/uploads/${res.data.profile.profileImage}`);
       }
     } catch (error) {
       setMsg(error.response?.data?.err || "Error while updating profile");
@@ -160,7 +160,7 @@ const Profile = () => {
         return;
       }
 
-      const res = await axios.delete(`http://localhost:5000/dp/${user.username}`);
+      const res = await axios.delete(`https://ai-interview-preparation-platform-backend-ks11.onrender.com/dp/${user.username}`);
       setProfileData(null);
       setPreview("");
       setMsg(res.data.msg || "Profile deleted successfully");
