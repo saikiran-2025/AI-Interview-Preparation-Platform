@@ -25,7 +25,7 @@ const Mock_test = () => {
       setMsg("");
       setResult(null);
 
-      const res = await axios.post("http://localhost:5000/start", {
+      const res = await axios.post("https://ai-interview-preparation-platform-backend-ks11.onrender.com/start", {
         Language,
         Level,
       });
@@ -59,7 +59,7 @@ const Mock_test = () => {
       setLoadingSubmit(true);
       setMsg("");
 
-      const res = await axios.post("http://localhost:5000/submit", {
+      const res = await axios.post("https://ai-interview-preparation-platform-backend-ks11.onrender.com/submit", {
         examId,
         answers,
       });
