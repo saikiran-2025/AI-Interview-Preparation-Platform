@@ -26,7 +26,7 @@ const Register = () => {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/register",
+        "https://ai-interview-preparation-platform-backend-ks11.onrender.com/register",
         {
           username,
           pwd
