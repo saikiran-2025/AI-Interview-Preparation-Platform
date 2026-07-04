@@ -18,7 +18,7 @@ const Logout = () => {
 
             if (user?.username) {
                 await axios.post(
-                    `http://localhost:5000/logout/${user.username}`
+                    `https://ai-interview-preparation-platform-backend-ks11.onrender.com/${user.username}`
                 );
             }
 
