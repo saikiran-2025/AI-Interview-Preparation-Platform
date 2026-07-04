@@ -1,0 +1,211 @@
+/* ==========================================
+            NAVBAR
+========================================== */
+
+.info-nav{
+
+    width:100%;
+
+    background:#ffffff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:28px 20px 15px;
+
+    border-bottom:1px solid #ececec;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+
+}
+
+/* ==========================================
+          TITLE
+========================================== */
+
+.info{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.interview{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#111;
+
+    letter-spacing:1px;
+
+}
+
+.interview::after{
+
+    content:"Practice • Analyze • Get Hired";
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:13px;
+
+    color:#888;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+}
+
+/* ==========================================
+        NAV LINKS
+========================================== */
+
+.nav-links{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding-top:15px;
+
+    border-top:1px solid #f2f2f2;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================
+            LINKS
+========================================== */
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    position:relative;
+
+    padding:8px 0;
+
+    transition:.3s;
+
+}
+
+/* Underline */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:#111;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.nav-links a:hover{
+
+    color:#444;
+
+}
+
+/* Logout */
+
+.nav-links a:last-child{
+
+    color:#d62839;
+
+}
+
+.nav-links a:last-child::after{
+
+    background:#d62839;
+
+}
+
+.nav-links a:last-child:hover{
+
+    color:#b10018;
+
+}
+
+/* ==========================================
+        RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.interview{
+
+font-size:26px;
+
+}
+
+.nav-links{
+
+gap:22px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.interview{
+
+font-size:21px;
+
+}
+
+.interview::after{
+
+font-size:11px;
+
+letter-spacing:1px;
+
+}
+
+.nav-links{
+
+flex-direction:column;
+
+gap:14px;
+
+}
+
+}

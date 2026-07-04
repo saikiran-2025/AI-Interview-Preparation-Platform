@@ -1,0 +1,193 @@
+/* ==============================
+        CAROUSAL
+============================== */
+
+.bnr{
+    width:95%;
+    height:520px;
+
+    margin:30px auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:8px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+/* ==============================
+        IMAGE
+============================== */
+
+.bnr img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:all .6s ease;
+
+}
+
+/* ==============================
+        LEFT & RIGHT BUTTONS
+============================== */
+
+.bnr .fa-less-than,
+.bnr .fa-greater-than{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:42px;
+
+    height:42px;
+
+    background:rgba(255,255,255,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    color:#333;
+
+    transition:.3s;
+
+    z-index:10;
+
+}
+
+.bnr .fa-less-than{
+
+    left:15px;
+
+}
+
+.bnr .fa-greater-than{
+
+    right:15px;
+
+}
+
+.bnr .fa-less-than:hover,
+.bnr .fa-greater-than:hover{
+
+    background:#ffffff;
+
+    color:#000;
+
+}
+
+/* ==============================
+        DOTS
+============================== */
+
+.circles{
+
+    position:absolute;
+
+    bottom:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:10px;
+
+    z-index:20;
+
+}
+
+.circles i{
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:11px;
+
+    transition:.3s;
+
+}
+
+.circles i:hover{
+
+    transform:scale(1.2);
+
+}
+
+/* ==============================
+        RESPONSIVE
+============================== */
+
+@media(max-width:992px){
+
+.bnr{
+
+    height:420px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.bnr{
+
+    width:100%;
+
+    height:320px;
+
+    border-radius:0;
+
+}
+
+.bnr .fa-less-than,
+.bnr .fa-greater-than{
+
+    width:36px;
+
+    height:36px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.bnr{
+
+    height:220px;
+
+}
+
+.circles{
+
+    bottom:10px;
+
+}
+
+.circles i{
+
+    font-size:9px;
+
+}
+
+}
