@@ -40,7 +40,7 @@ const Ats_resume = () => {
       formData.append("resume", resume);
 
       const res = await axios.post(
-        "http://localhost:5000/resume-check",
+        "https://ai-interview-preparation-platform-backend-ks11.onrender.com/resume-check",
         formData,
         {
           headers: {
